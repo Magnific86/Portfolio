@@ -5,6 +5,8 @@ import { sideBarMenu, socialIcons } from "../../data/data";
 import { BsXLg, BsListNested } from "react-icons/bs";
 import { reducer } from "../../hooks/useReducer";
 import "./sidebar.scss";
+import { FaBtc, FaEthereum } from "react-icons/fa";
+import { SiLetsencrypt } from "react-icons/si";
 
 const defaultOptions = {
   showAside1: false,
@@ -29,7 +31,8 @@ function Sidebar() {
             onClick={() => dispatch({ type: "CLOSE_NAVBAR" })}
             className="close-btn switch__color"
           />
-          <Link
+          <a
+            target="_blank"
             className="logo-section"
             style={{
               display: "flex",
@@ -37,7 +40,7 @@ function Sidebar() {
               alignItems: "center",
               lineHeight: "4",
             }}
-            to="/"
+            href="https://portfolio-two-brown-94.vercel.app/"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,10 +56,25 @@ function Sidebar() {
                 fill="white"
               />
             </svg>
-            <span className="switch__color" style={{ fontSize: "1.2rem" }}>
-              ...
+
+            <span style={{ fontSize: "1.2rem" }} className="switch__color">
+              {/*    <SiLetsencrypt />
+              <FaBtc /> */}
+              <div /* style={{ border: ".5px solid gold", width: "100%", height: "100%" }} */
+              >
+                <FaEthereum
+                className="borderSelf"
+                  style={{
+                    fontSize: 30,
+                    width: "100%",
+                    height: "100%",
+                    padding: 10,
+                    borderRadius: 25,
+                  }}
+                />
+              </div>
             </span>
-          </Link>
+          </a>
           <ul className="side-link">
             {sideBarMenu.map((link, index) => {
               const { text, icon, url } = link;

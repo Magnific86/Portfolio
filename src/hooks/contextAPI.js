@@ -80,4 +80,4 @@ const useGLobalContext = () => {
   return useContext(AppContext)
 }
 
-export { AppProvider, useGLobalContext }
+export { AppProvider, useGLobalContext, AppContext }

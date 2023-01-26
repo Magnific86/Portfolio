@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { MdArrowDropDown } from 'react-icons/md'
 
 import Blast from '../BlastAnimation/Blast'
 import Logo from '../logoAnimation/Logo'
 import './header.scss'
+import { AppContext } from '../../hooks/contextAPI'
 
 const nameArray = ["N", "i", "k", "i", "t", "a" ];
 const jobArray = [
@@ -26,6 +27,8 @@ const jobArray = [
 
 function Header(){
   const [letterClass, setLetterClass] = useState("text-animate");
+  const {changeTemp} = useContext(AppContext)
+  // const colorTheme = 
 
   useEffect(() => {
     setTimeout(() => {
@@ -75,7 +78,7 @@ function Header(){
             />
           </h1>
 
-          <p className="text-desc">WEB DEVELOPER / UI/UX DESIGNER / SOLIDITY DEV</p>
+          <h3  className="text-desc">WEB DEVELOPER / UI/UX DESIGNER / SOLIDITY DEV</h3>
           <Link to="/contact" className="contact-button">
             <div>
               <span className="bg switch__bg"></span>
