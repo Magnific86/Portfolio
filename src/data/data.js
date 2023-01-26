@@ -7,6 +7,8 @@ import {
   BsBootstrapFill,
   BsPersonLinesFill,
   BsGithub,
+  BsWhatsapp,
+  BsTelegram,
 } from "react-icons/bs";
 
 import { RiContactsLine, RiReactjsLine } from "react-icons/ri";
@@ -18,14 +20,15 @@ import {
   SiNextdotjs,
   SiVercel,
   SiSolidity,
+  SiTailwindcss,
+  SiTypescript
 } from "react-icons/si";
 
-import { GrGithub, GrInstagram } from "react-icons/gr";
+import { GrGithub, GrInstagram} from "react-icons/gr";
 import { AiFillHtml5 } from "react-icons/ai";
 import { DiCss3, DiMongodb } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io";
-import { FaHardHat, FaNodeJs, FaTelegram } from "react-icons/fa";
-import { SiTypescript, SiTailwindcss} from "react-icons/si";
+import { FaDiscord, FaHardHat, FaNodeJs } from "react-icons/fa";
 
 // sidebar menu functionality
 const sideBarMenu = [
@@ -69,9 +72,16 @@ const socialIcons = [
   },
 
   {
-    icon: <FaTelegram className="skills-icon switch__color" />,
-    spanText: "EXPRESS JS",
+    icon: <BsTelegram className="skills-icon switch__color" />,
     url: "https://t.me/nodefined",
+  },
+  {
+    icon: <BsWhatsapp className="skills-icon switch__color" />,
+    url: "https://t.me/nodefined",
+  },
+  {
+    icon: <FaDiscord className="skills-icon switch__color" />,
+    url: "https://discord.com/users/507463122173558807",
   },
 ];
 // skills card
