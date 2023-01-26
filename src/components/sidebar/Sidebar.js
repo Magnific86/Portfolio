@@ -81,7 +81,7 @@ function Sidebar(){
             {socialIcons.map((icons, index) => {
               const { icon, url } = icons
               return (
-                <a href={url} key={index}>
+                <a target="_blank" href={url} key={index}>
                   {icon}
                 </a>
               )

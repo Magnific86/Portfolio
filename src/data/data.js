@@ -15,14 +15,18 @@ import {
   SiMaterialui,
   SiExpress,
   SiRedux,
+  SiNextdotjs,
+  SiVercel,
+  SiSolidity,
 } from "react-icons/si";
 
 import { GrGithub, GrInstagram } from "react-icons/gr";
 import { AiFillHtml5 } from "react-icons/ai";
 import { DiCss3, DiMongodb } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io";
-import { FaNodeJs, FaTelegram } from "react-icons/fa";
+import { FaHardHat, FaNodeJs, FaTelegram } from "react-icons/fa";
 import { SiTypescript, SiTailwindcss} from "react-icons/si";
+
 // sidebar menu functionality
 const sideBarMenu = [
   {
@@ -52,22 +56,22 @@ const sideBarMenu = [
 const socialIcons = [
   {
     icon: <GrGithub className="icon switch__color" />,
-    url: "https://github.com/FaraJM21 ",
+    url: "https://github.com/Magnific86",
   },
 
   {
     icon: <GrInstagram className="icon switch__color" />,
-    url: "https://www.instagram.com/farrukhrikhsyev",
+    url: "https://www.instagram.com/klevtsov49/",
   },
   {
     icon: <FiLinkedin className="icon switch__color" />,
-    url: "https://www.linkedin.com/in/farrukh-jurakulovdev/",
+    url: "https://www.linkedin.com/in/nikita-klevtsov-018a59263/",
   },
 
   {
     icon: <FaTelegram className="skills-icon switch__color" />,
     spanText: "EXPRESS JS",
-    url: "https://t.me/edwardpro",
+    url: "https://t.me/nodefined",
   },
 ];
 // skills card
@@ -162,6 +166,27 @@ const skillSet = [
     icon: <FiFigma className="skills-icon switch__color" />,
     spanText: "Figma",
     url: "https://figma.com",
+  },
+  {
+    icon: <SiNextdotjs className="skills-icon switch__color" />,
+    spanText: "Next JS",
+    url: "https://nextjs.org/",
+  },
+
+  {
+    icon: <SiVercel className="skills-icon switch__color" />,
+    spanText: "Vercel",
+    url: "https://vercel.com/",
+  },
+  {
+    icon: <SiSolidity className="skills-icon switch__color" />,
+    spanText: "Solidity",
+    url: "https://docs.soliditylang.org/en/v0.8.17/",
+  },
+  {
+    icon: <FaHardHat className="skills-icon switch__color" />,
+    spanText: "Hardhat",
+    url: "https://hardhat.org/",
   },
 ];
 
