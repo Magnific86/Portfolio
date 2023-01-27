@@ -22,7 +22,7 @@ function ProjectPage() {
 
   return (
     <section className="section__projects section__padding">
-      <div className="fake-big">Projects</div>
+{/*       <div className="fake-big">Projects</div>
       <h2 aria-label="My projects" className="section__projects-title">
         <Blast
           letterClass={letterClass}
@@ -44,7 +44,7 @@ function ProjectPage() {
         {projects.map((project, index) => {
           return <Project {...project} key={index} />;
         })}
-      </div>
+      </div> */}
     </section>
   );
 }

@@ -20,7 +20,6 @@ function Contact() {
     };
   }, []);
 
-  
   useEffect(() => {
     Aos.init({ duration: 2000, delay: 10 });
   }, []);
@@ -111,10 +110,10 @@ function Contact() {
       showMessage("por favor! enviar un mensaje");
     } else if (email && message) {
       emailjs.sendForm(
-        "service_9k6oeer",
-        "template_lamoad5",
+        "default_service",
+        "template_my",
         form.current,
-        "LWdf01MLJg_lJ3xcY"
+        "l1LBuE0jVt7xC1_kY"
       );
       setSuccess(emailRef);
       setSuccess(TextAreaRef);
@@ -141,82 +140,81 @@ function Contact() {
                 indexLetter={12}
               />
             </h2>
-           
-              <p  data-aos="fade-up">
-                I'm interested in freelance opportunities and I am always ready
-                to build projects at anytime, if you have any job offer for me,
-                you could use the form below to react out to me.
-              </p>
-            
-          </div>
-          
-            <div className="input-wrapper">
-              <div className="form-input-group">
-                <input
-                 data-aos="fade-up"
-                  autoComplete="false"
-                  type="text"
-                  placeholder="Name"
-                  name="name"
-                  value={validInpt.name}
-                  onChange={handleChange}
-                />
-                <span className="switch__bg"></span>
-                <BsExclamationLg className="exclamation" />
-                <BsPatchCheckFill className="checkCircle" />
-              </div>
 
-              <div className="form-input-group">
-                <input 
-                 data-aos="fade-up"
-                  autoComplete="false"
-                  ref={emailRef}
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                  value={validInpt.email}
-                  onChange={handleChange}
-                />
-                <span className="switch__bg"></span>
-                <BsExclamationLg className="exclamation" />
-                <BsPatchCheckFill className="checkCircle" />
-              </div>
-            </div>
-        
-          
+            <p data-aos="fade-up">
+              I'm interested in freelance opportunities and I am always ready to
+              build projects at anytime, if you have any job offer for me, you
+              could use the form below to react out to me.
+            </p>
+          </div>
+
+          <div className="input-wrapper">
             <div className="form-input-group">
-              <textarea
-               data-aos="fade-up"
+              <input
+                data-aos="fade-up"
                 autoComplete="false"
-                ref={TextAreaRef}
                 type="text"
-                placeholder="Message"
-                name="message"
-                value={validInpt.message}
+                placeholder="Name"
+                name="name"
+                value={validInpt.name}
                 onChange={handleChange}
               />
               <span className="switch__bg"></span>
               <BsExclamationLg className="exclamation" />
               <BsPatchCheckFill className="checkCircle" />
             </div>
-        
-        
-            <button type="submit" className="contact-button submit-button"  data-aos="fade-right">
-              <div>
-                <span className="bg switch__bg"></span>
-                <span className="base switch__border-color"></span>
-                <span className="text">
-                  Send Message
-                  <RiSendPlane2Fill className="message-deliver" />
-                </span>
-              </div>
-            </button>
-        
-        
-            <footer className="footer">
-              <p> &copy; copyright All Right Reserved Almarex - 2022</p>
-            </footer>
 
+            <div className="form-input-group">
+              <input
+                data-aos="fade-up"
+                autoComplete="false"
+                ref={emailRef}
+                type="email"
+                placeholder="Email"
+                name="email"
+                value={validInpt.email}
+                onChange={handleChange}
+              />
+              <span className="switch__bg"></span>
+              <BsExclamationLg className="exclamation" />
+              <BsPatchCheckFill className="checkCircle" />
+            </div>
+          </div>
+
+          <div className="form-input-group">
+            <textarea
+              data-aos="fade-up"
+              autoComplete="false"
+              ref={TextAreaRef}
+              type="text"
+              placeholder="Message"
+              name="message"
+              value={validInpt.message}
+              onChange={handleChange}
+            />
+            <span className="switch__bg"></span>
+            <BsExclamationLg className="exclamation" />
+            <BsPatchCheckFill className="checkCircle" />
+          </div>
+
+          <button
+            type="submit"
+            className="contact-button submit-button"
+            data-aos="fade-right"
+          >
+            <div>
+              <span className="bg switch__bg"></span>
+              <span className="base switch__border-color"></span>
+              <span className="text">
+                Send Message
+                <RiSendPlane2Fill className="message-deliver" />
+              </span>
+            </div>
+          </button>
+
+          <footer className="footer">
+            <p> &copy; copyright All Right Reserved Almarex - 2022</p>
+          </footer>
         </form>
 
         <div ref={MessageRef} className="message"></div>
