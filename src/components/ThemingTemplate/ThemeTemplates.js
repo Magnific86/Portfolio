@@ -1,12 +1,12 @@
-import React from 'react'
-import { FiSettings } from 'react-icons/fi'
-import { BsMoonStars, BsFillSunFill } from 'react-icons/bs'
-import { useGLobalContext } from '../../hooks/contextAPI'
+import React from "react";
+import { FiSettings } from "react-icons/fi";
+import { BsMoonStars, BsFillSunFill } from "react-icons/bs";
+import { useGLobalContext } from "../../hooks/contextAPI";
 
-import { BsXLg } from 'react-icons/bs'
-import './themetemplate.scss'
+import { BsXLg } from "react-icons/bs";
+import "./themetemplate.scss";
 
-function ThemeTemplate(){
+function ThemeTemplate() {
   const {
     isTemplateOpen,
     openTemplate,
@@ -15,8 +15,26 @@ function ThemeTemplate(){
     changeTemp,
     handleTemp,
     colorTheme,
-  } = useGLobalContext()
+  } = useGLobalContext();
 
+
+  const arr = [
+    "template-1",
+    "template-2",
+    "template-3",
+    "template-4",
+    "template-5",
+    "template-6",
+    "template-7",
+  ].map((el, index) => (
+    <div
+      key={index}
+      className={`template ${changeTemp === el ? "switch__border-color" : ""}`}
+      onClick={() => handleTemp(el)}
+    >
+      <div className={el}></div>
+    </div>
+  ));
 
   return (
     <>
@@ -26,8 +44,8 @@ function ThemeTemplate(){
       <div
         className={`${
           isTemplateOpen
-            ? 'theme-wrapper show-template'
-            : 'theme-wrapper hide-template'
+            ? "theme-wrapper show-template"
+            : "theme-wrapper hide-template"
         }`}
       >
         <div className="theme-header">
@@ -41,80 +59,24 @@ function ThemeTemplate(){
         </div>
         <div className="mode">
           <div
-            className={`${colorTheme === 'light-mode' ? 'active-mode' : ''}`}
-            onClick={() => handleTheme('light-mode')}
+            className={`${colorTheme === "light-mode" ? "active-mode" : ""}`}
+            onClick={() => handleTheme("light-mode")}
           >
             <BsFillSunFill className="icon switch__color" />
           </div>
           <div
-            className={`${colorTheme === 'dark-mode' ? 'active-mode' : ''}`}
-            onClick={() => handleTheme('dark-mode')}
+            className={`${colorTheme === "dark-mode" ? "active-mode" : ""}`}
+            onClick={() => handleTheme("dark-mode")}
           >
             <BsMoonStars className="icon switch__color " />
           </div>
         </div>
         <div className="template-wrapper">
-          <div
-            className={`template ${
-              changeTemp === 'template-1' ? 'switch__border-color' : ''
-            }`}
-            onClick={() => handleTemp('template-1')}
-          >
-            <div className="template-1"></div>
-          </div>
-          <div
-            className={`template ${
-              changeTemp === 'template-2' ? 'switch__border-color' : ''
-            }`}
-            onClick={() => handleTemp('template-2')}
-          >
-            <div className="template-2"></div>
-          </div>
-          <div
-            className={`template ${
-              changeTemp === 'template-3' ? 'switch__border-color' : ''
-            }`}
-            onClick={() => handleTemp('template-3')}
-          >
-            <div className="template-3"></div>
-          </div>
-          <div
-            className={`template ${
-              changeTemp === 'template-4' ? 'switch__border-color' : ''
-            }`}
-            onClick={() => handleTemp('template-4')}
-          >
-            <div className="template-4"></div>
-          </div>
-          <div
-            className={`template ${
-              changeTemp === 'template-5' ? 'switch__border-color' : ''
-            }`}
-            onClick={() => handleTemp('template-5')}
-          >
-            <div className="template-5"></div>
-          </div>
-          <div
-            className={`template ${
-              changeTemp === 'template-6' ? 'switch__border-color' : ''
-            }`}
-            onClick={() => handleTemp('template-6')}
-          >
-            <div className="template-6"></div>
-          </div>
-
-          <div
-            className={`template ${
-              changeTemp === 'template-7' ? 'switch__border-color' : ''
-            }`}
-            onClick={() => handleTemp('template-7')}
-          >
-            <div className="template-7"></div>
-          </div>
+          {arr}
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default ThemeTemplate
+export default ThemeTemplate;
