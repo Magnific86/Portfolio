@@ -1,47 +1,47 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useState, memo } from "react";
 
-const AppContext = createContext()
+const AppContext = createContext();
 
-const AppProvider = React.memo(({ children }) => {
-  const [colorTheme, setColorTheme] = useState('dark-mode')
-  const [isTemplateOpen, setIsTemplateOpen] = useState(false)
-  const [showSearchInput, setShowSearchInput] = useState(false)
-  const [changeTemp, setChangeTemp] = useState('template-1')
+const AppProvider = memo(({ children }) => {
+  const [colorTheme, setColorTheme] = useState("dark-mode");
+  const [isTemplateOpen, setIsTemplateOpen] = useState(false);
+  const [showSearchInput, setShowSearchInput] = useState(false);
+  const [changeTemp, setChangeTemp] = useState("template-1");
 
   // dark mode and light mode functionality
   useEffect(() => {
-    const currentTheme = localStorage.getItem('theme')
+    const currentTheme = localStorage.getItem("theme");
     if (currentTheme) {
-      setColorTheme(currentTheme)
+      setColorTheme(currentTheme);
     }
-  }, [])
+  }, []);
 
   const handleTheme = (theme) => {
-    setColorTheme(theme)
-    localStorage.setItem('theme', theme)
-  }
+    setColorTheme(theme);
+    localStorage.setItem("theme", theme);
+  };
 
   // Theme template functionality
   useEffect(() => {
-    const currentTheme = localStorage.getItem('temp')
-    setChangeTemp(currentTheme)
-  }, [])
+    const currentTheme = localStorage.getItem("temp");
+    setChangeTemp(currentTheme);
+  }, []);
 
   const handleTemp = (temp) => {
-    setChangeTemp(temp)
-    localStorage.setItem('temp', temp)
-  }
+    setChangeTemp(temp);
+    localStorage.setItem("temp", temp);
+  };
 
   // open and close sidebar functionality
   const openTemplate = () => {
-    setIsTemplateOpen(true)
-  }
+    setIsTemplateOpen(true);
+  };
   const closeTemplate = () => {
-    setIsTemplateOpen(false)
-  }
+    setIsTemplateOpen(false);
+  };
   const showInput = () => {
-    setShowSearchInput(true)
-  }
+    setShowSearchInput(true);
+  };
 
   return (
     <AppContext.Provider
@@ -60,24 +60,20 @@ const AppProvider = React.memo(({ children }) => {
         colorTheme,
       }}
     >
-
-      
       <div
         className={`wrapper ${
-          colorTheme === 'dark-mode' ? 'dark-mode' : 'light-mode'
+          colorTheme === "dark-mode" ? "dark-mode" : "light-mode"
         }`}
         id={`${changeTemp}`}
       >
         {children}
       </div>
-
-
     </AppContext.Provider>
-  )
-})
+  );
+});
 
 const useGLobalContext = () => {
-  return useContext(AppContext)
-}
+  return useContext(AppContext);
+};
 
-export { AppProvider, useGLobalContext, AppContext }
+export { AppProvider, useGLobalContext, AppContext };

@@ -1,8 +1,10 @@
-import React from "react";
-// react-icons
 import { FiGrid, FiLinkedin, FiFigma } from "react-icons/fi";
 import { VscProject } from "react-icons/vsc";
-import { AiOutlineAntDesign } from "react-icons/ai";
+import { TbWorld } from "react-icons/tb";
+import GoShopsPrewies from "../assets/images/goshops-prew.png";
+import weather from "../assets/images/weahther.png";
+import musicShopPrew from "../assets/images/music-shop-prew.png";
+import sobesTopicsPrew from "../assets/images/sobes-topics-prev.png";
 import {
   BsBootstrapFill,
   BsPersonLinesFill,
@@ -21,11 +23,11 @@ import {
   SiVercel,
   SiSolidity,
   SiTailwindcss,
-  SiTypescript
+  SiTypescript,
 } from "react-icons/si";
 
-import { GrGithub, GrInstagram} from "react-icons/gr";
-import { AiFillHtml5 } from "react-icons/ai";
+import { GrGithub, GrInstagram } from "react-icons/gr";
+import { AiFillHtml5, AiOutlineAntDesign } from "react-icons/ai";
 import { DiCss3, DiMongodb } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io";
 import { FaDiscord, FaHardHat, FaNodeJs } from "react-icons/fa";
@@ -47,13 +49,12 @@ const sideBarMenu = [
     icon: <VscProject className="link-icon" />,
     url: "/project",
   },
-  
+
   {
     text: "Contacts",
     icon: <RiContactsLine className="link-icon" />,
     url: "/contact",
   },
-  
 ];
 // social media icons
 const socialIcons = [
@@ -137,7 +138,6 @@ const skillSet = [
     url: "https://ant.design/",
   },
 
-
   {
     icon: <BsGithub className="skills-icon switch__color" />,
     spanText: "GITHUB",
@@ -165,8 +165,7 @@ const skillSet = [
     spanText: "EXPRESS JS",
     url: "https://expressjs.com/ru/",
   },
-  
- 
+
   {
     icon: <SiRedux className="skills-icon switch__color" />,
     spanText: "Redux",
@@ -200,7 +199,83 @@ const skillSet = [
   },
 ];
 
-export { sideBarMenu, socialIcons, skillSet };
+const myProjects = [
+  {
+    id: 1,
+    name: "Posts Storage",
+    desc: "Full-stack App",
+    stack: "Express, MongoDB, React & TS",
 
+    gitHubUrl: {
+      icon: <GrGithub />,
+      url: "https://github.com/Magnific86/sobes-topics",
+    },
+    website: {
+      icon: <TbWorld />,
+      url: "https://sobes-topics.vercel.app/",
+    },
+    imgUrl: sobesTopicsPrew,
+  },
+  {
+    id: 2,
+    name: "Internet-store",
+    desc: "My biggest project",
+    stack: "React, NextJS, SASS, AntD",
 
+    gitHubUrl: {
+      icon: <GrGithub />,
+      url: "https://github.com/Magnific86/trexpress",
+    },
+    website: {
+      icon: <TbWorld />,
+      url: "https://trexpress.uz/",
+    },
+    imgUrl: "",
+  },
+  {
+    id: 3,
+    name: "Go Shops",
+    desc: "Shopping store",
+    stack: "NextJS, SASS, AntD",
+    gitHubUrl: {},
+    website: {
+      icon: <TbWorld />,
+      url: "https://goshops.org/",
+    },
+    imgUrl: GoShopsPrewies,
+  },
+  {
+    id: 4,
+    name: "Weather Forecast",
+    desc: "That is my Weather Forecast Project which i first used and learned tailwind. It shows daily 5 hours of the day and 5 days of the week",
+    stack: "React, Tailwind, OpenWeatherMap, CSS",
 
+    gitHubUrl: {
+      icon: <GrGithub />,
+      url: "https://github.com/FaraJM21/weatherapp",
+    },
+    website: {
+      icon: <TbWorld />,
+      url: "https://weather-forecast-daily.netlify.app/",
+    },
+    imgUrl: weather,
+  },
+  {
+    id: 5,
+    name: "Web3 Music Shop",
+    desc: "First web3 project work with self-write smart-contract",
+    stack: "React, Tailwind, Solidity, Hardhat, Ethers",
+
+    gitHubUrl: {
+      icon: <GrGithub />,
+      url: "https://github.com/Magnific86/music-shop/tree/main",
+    },
+    website: {
+      icon: <TbWorld />,
+      url: "https://music-shop-gamma.vercel.app/",
+    },
+    imgUrl: musicShopPrew,
+  },
+];
+
+export { sideBarMenu, socialIcons, skillSet, myProjects };

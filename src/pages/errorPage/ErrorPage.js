@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import feelingblue from "../../assets/images/undraw_feeling_blue_-4-b7q.svg";
 

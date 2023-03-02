@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { BsExclamationLg, BsPatchCheckFill } from "react-icons/bs";
 import { RiSendPlane2Fill } from "react-icons/ri";
 import { Blast } from "../../components";

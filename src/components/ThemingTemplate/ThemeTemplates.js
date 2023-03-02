@@ -1,4 +1,3 @@
-import React from "react";
 import { FiSettings } from "react-icons/fi";
 import { BsMoonStars, BsFillSunFill } from "react-icons/bs";
 import { useGLobalContext } from "../../hooks/contextAPI";

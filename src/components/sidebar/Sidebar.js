@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import { useReducer } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { sideBarMenu, socialIcons } from "../../data/data";
 
@@ -58,12 +58,12 @@ function Sidebar() {
             </svg>
 
             <span style={{ fontSize: "1.2rem" }} className="switch__color">
-              {/*    <SiLetsencrypt />
+              {/* <SiLetsencrypt />
               <FaBtc /> */}
               <div /* style={{ border: ".5px solid gold", width: "100%", height: "100%" }} */
               >
                 <FaEthereum
-                className="borderSelf"
+                  className="borderSelf"
                   style={{
                     fontSize: 30,
                     width: "100%",
@@ -76,25 +76,20 @@ function Sidebar() {
             </span>
           </a>
           <ul className="side-link">
-            {sideBarMenu.map((link, index) => {
-              const { text, icon, url } = link;
-              return (
-                <li key={index}>
-                  <NavLink
-                    onClick={() => dispatch({ type: "CLOSE_NAVBAR" })}
-                    className={({ isActive }) => {
-                      return isActive
-                        ? "nav__links active-links"
-                        : "nav__links";
-                    }}
-                    to={url}
-                  >
-                    {icon}
-                    {text}
-                  </NavLink>
-                </li>
-              );
-            })}
+            {sideBarMenu.map(({ text, icon, url }) => (
+              <li key={url}>
+                <NavLink
+                  onClick={() => dispatch({ type: "CLOSE_NAVBAR" })}
+                  className={({ isActive }) => {
+                    return isActive ? "nav__links active-links" : "nav__links";
+                  }}
+                  to={url}
+                >
+                  {icon}
+                  {text}
+                </NavLink>
+              </li>
+            ))}
           </ul>
           <div className="social-icon">
             {socialIcons.map(({ icon, url }) => (

@@ -1,4 +1,3 @@
-import React from 'react'
 import './logo.scss'
 import me from "../../assets/images/me.jpg"
 
