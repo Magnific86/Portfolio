@@ -1,10 +1,14 @@
 import { FiGrid, FiLinkedin, FiFigma } from "react-icons/fi";
 import { VscProject } from "react-icons/vsc";
 import { TbWorld } from "react-icons/tb";
-import GoShopsPrewies from "../assets/images/goshops-prew.png";
+import GoShopsPrewies from "../assets/images/goshops.png";
 import weather from "../assets/images/weahther.png";
-import musicShopPrew from "../assets/images/music-shop-prew.png";
-import sobesTopicsPrew from "../assets/images/sobes-topics-prev.png";
+import musicShopPrew from "../assets/images/musicShop.png";
+import sobesTopicsPrew from "../assets/images/sobesTopics.png";
+import trexpressPrew from "../assets/images/trexpress.png";
+import fazoPrew from "../assets/images/fazo.png";
+import ultimateShopPrew from "../assets/images/ultimateShop.png";
+import calulatorPrew from "../assets/images/calculator.png";
 import {
   BsBootstrapFill,
   BsPersonLinesFill,
@@ -203,8 +207,9 @@ const myProjects = [
   {
     id: 1,
     name: "Posts Storage",
-    desc: "Full-stack App",
-    stack: "Express, MongoDB, React & TS",
+    desc: "Full-stack  App, using MongoDB cluster, self-write server and with blockchain",
+    stack:
+      "Express, MongoDB, React & TS, Solidity, Hardhat, deploy smart-contract on mumbai testnet, server not deployed",
 
     gitHubUrl: {
       icon: <GrGithub />,
@@ -219,7 +224,7 @@ const myProjects = [
   {
     id: 2,
     name: "Internet-store",
-    desc: "My biggest project",
+    desc: "My biggest project, code is private",
     stack: "React, NextJS, SASS, AntD",
 
     gitHubUrl: {
@@ -230,13 +235,13 @@ const myProjects = [
       icon: <TbWorld />,
       url: "https://trexpress.uz/",
     },
-    imgUrl: "",
+    imgUrl: trexpressPrew,
   },
   {
     id: 3,
     name: "Go Shops",
-    desc: "Shopping store",
-    stack: "NextJS, SASS, AntD",
+    desc: "Shopping store, code is private",
+    stack: "React, NextJS, SASS",
     gitHubUrl: {},
     website: {
       icon: <TbWorld />,
@@ -246,14 +251,23 @@ const myProjects = [
   },
   {
     id: 4,
+    name: "Fazo shop",
+    desc: "Shopping store, code is private",
+    stack: "React, SASS, AntD",
+    gitHubUrl: {},
+    website: {
+      icon: <TbWorld />,
+      url: "https://fazo.uz/",
+    },
+    imgUrl: fazoPrew,
+  },
+  {
+    id: 5,
     name: "Weather Forecast",
-    desc: "That is my Weather Forecast Project which i first used and learned tailwind. It shows daily 5 hours of the day and 5 days of the week",
+    desc: "That is my Weather Forecast Project which i used tailwind",
     stack: "React, Tailwind, OpenWeatherMap, CSS",
 
-    gitHubUrl: {
-      icon: <GrGithub />,
-      url: "https://github.com/FaraJM21/weatherapp",
-    },
+    gitHubUrl: {},
     website: {
       icon: <TbWorld />,
       url: "https://weather-forecast-daily.netlify.app/",
@@ -261,9 +275,9 @@ const myProjects = [
     imgUrl: weather,
   },
   {
-    id: 5,
+    id: 6,
     name: "Web3 Music Shop",
-    desc: "First web3 project work with self-write smart-contract",
+    desc: "First web3 project work with self-write smart-contract, deployed on arbutrum testnet",
     stack: "React, Tailwind, Solidity, Hardhat, Ethers",
 
     gitHubUrl: {
@@ -275,6 +289,38 @@ const myProjects = [
       url: "https://music-shop-gamma.vercel.app/",
     },
     imgUrl: musicShopPrew,
+  },
+  {
+    id: 7,
+    name: "My first mini-shop",
+    desc: "First expirience creating react-app, worked with fake stor API",
+    stack: "React, Tailwind, React Context, axios",
+
+    gitHubUrl: {
+      icon: <GrGithub />,
+      url: "https://github.com/Magnific86/ultimate_shop",
+    },
+    website: {
+      icon: <TbWorld />,
+      url: "https://ultimate-shop.vercel.app/",
+    },
+    imgUrl: ultimateShopPrew,
+  },
+  {
+    id: 8,
+    name: "Calculator",
+    desc: "Created a simple calculator😄 with Redux",
+    stack: "React, Tailwind, Redux",
+
+    gitHubUrl: {
+      icon: <GrGithub />,
+      url: "https://github.com/Magnific86/calculator/tree/main",
+    },
+    website: {
+      icon: <TbWorld />,
+      url: "https://calculator-three-steel.vercel.app/",
+    },
+    imgUrl: calulatorPrew,
   },
 ];
 

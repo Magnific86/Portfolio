@@ -1,12 +1,11 @@
 import { useReducer } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { sideBarMenu, socialIcons } from "../../data/data";
 
 import { BsXLg, BsListNested } from "react-icons/bs";
 import { reducer } from "../../hooks/useReducer";
 import "./sidebar.scss";
-import { FaBtc, FaEthereum } from "react-icons/fa";
-import { SiLetsencrypt } from "react-icons/si";
+import { FaEthereum } from "react-icons/fa";
 
 const defaultOptions = {
   showAside1: false,
@@ -58,8 +57,6 @@ function Sidebar() {
             </svg>
 
             <span style={{ fontSize: "1.2rem" }} className="switch__color">
-              {/* <SiLetsencrypt />
-              <FaBtc /> */}
               <div /* style={{ border: ".5px solid gold", width: "100%", height: "100%" }} */
               >
                 <FaEthereum
