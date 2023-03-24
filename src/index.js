@@ -1,11 +1,14 @@
-import { createRoot } from 'react-dom/client'
-import App from './App'
-import { AppProvider } from './hooks/contextAPI'
-import './App.scss'
+import { createRoot } from "react-dom/client";
+import { StrictMode } from "react";
+import { AppProvider } from "./hooks/contextAPI";
+import App from "./App";
+import "./App.scss";
 
-const root = createRoot(document.getElementById('root'))
+const root = createRoot(document.getElementById("root"));
 root.render(
-  <AppProvider>
-    <App />
-  </AppProvider>,
-)
+  <StrictMode>
+    <AppProvider>
+      <App />
+    </AppProvider>
+  </StrictMode>
+);

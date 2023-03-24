@@ -7,6 +7,7 @@ import musicShopPrew from "../assets/images/musicShop.png";
 import sobesTopicsPrew from "../assets/images/sobesTopics.png";
 import trexpressPrew from "../assets/images/trexpress.png";
 import fazoPrew from "../assets/images/fazo.png";
+import adekvatPrew from "../assets/images/adekvat.png";
 import ultimateShopPrew from "../assets/images/ultimateShop.png";
 import calulatorPrew from "../assets/images/calculator.png";
 import {
@@ -252,7 +253,7 @@ const myProjects = [
   {
     id: 4,
     name: "Fazo shop",
-    desc: "Shopping store, code is private",
+    desc: "One more Shopping store, code is private",
     stack: "React, SASS, AntD",
     gitHubUrl: {},
     website: {
@@ -264,7 +265,7 @@ const myProjects = [
   {
     id: 5,
     name: "Weather Forecast",
-    desc: "That is my Weather Forecast Project which i used tailwind",
+    desc: "That is my Weather Forecast Project which i used tailwind and worked with API",
     stack: "React, Tailwind, OpenWeatherMap, CSS",
 
     gitHubUrl: {},
@@ -276,6 +277,22 @@ const myProjects = [
   },
   {
     id: 6,
+    name: "Adekvat",
+    desc: "Freelance project",
+    stack: "React, react-router-dom, SASS, AntD, React Context",
+
+    gitHubUrl: {
+      icons: <GrGithub />,
+      url: "https://github.com/Magnific86/adekvat/tree/main",
+    },
+    website: {
+      icon: <TbWorld />,
+      url: "https://adekvat.vercel.app/",
+    },
+    imgUrl: adekvatPrew,
+  },
+  {
+    id: 7,
     name: "Web3 Music Shop",
     desc: "First web3 project work with self-write smart-contract, deployed on arbutrum testnet",
     stack: "React, Tailwind, Solidity, Hardhat, Ethers",
@@ -291,7 +308,7 @@ const myProjects = [
     imgUrl: musicShopPrew,
   },
   {
-    id: 7,
+    id: 8,
     name: "My first mini-shop",
     desc: "First expirience creating react-app, worked with fake stor API",
     stack: "React, Tailwind, React Context, axios",
@@ -307,7 +324,7 @@ const myProjects = [
     imgUrl: ultimateShopPrew,
   },
   {
-    id: 8,
+    id: 9,
     name: "Calculator",
     desc: "Created a simple calculator😄 with Redux",
     stack: "React, Tailwind, Redux",

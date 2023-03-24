@@ -30,8 +30,8 @@ function Sidebar() {
             onClick={() => dispatch({ type: "CLOSE_NAVBAR" })}
             className="close-btn switch__color"
           />
-          <a
-            target="_blank"
+          <NavLink
+            path="/"
             className="logo-section"
             style={{
               display: "flex",
@@ -39,9 +39,8 @@ function Sidebar() {
               alignItems: "center",
               lineHeight: "4",
             }}
-            href="https://portfolio-two-brown-94.vercel.app/"
           >
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 171 210"
               className="sidebar__logo"
@@ -54,24 +53,22 @@ function Sidebar() {
                 d="M12.2177 101.884C32.1592 73.1578 55.5534 46.0733 77.8409 34.1237C106.411 46.259 126.403 71.3757 151.759 101.358C142.102 48.7847 113.282 9.51343 77.0849 1C44.8404 10.0195 20.7735 51.1438 12.2177 101.883V101.884Z"
                 fill="white"
               />
-            </svg>
-
+            </svg> */}
             <span style={{ fontSize: "1.2rem" }} className="switch__color">
-              <div /* style={{ border: ".5px solid gold", width: "100%", height: "100%" }} */
-              >
+              <div>
                 <FaEthereum
                   className="borderSelf"
                   style={{
-                    fontSize: 30,
+                    fontSize: 60,
                     width: "100%",
                     height: "100%",
                     padding: 10,
-                    borderRadius: 25,
+                    borderRadius: 30,
                   }}
                 />
               </div>
             </span>
-          </a>
+          </NavLink>
           <ul className="side-link">
             {sideBarMenu.map(({ text, icon, url }) => (
               <li key={url}>

@@ -24,7 +24,9 @@ const AppProvider = memo(({ children }) => {
   // Theme template functionality
   useEffect(() => {
     const currentTheme = localStorage.getItem("temp");
-    setChangeTemp(currentTheme);
+    if (currentTheme) {
+      setChangeTemp(currentTheme);
+    }
   }, []);
 
   const handleTemp = (temp) => {
