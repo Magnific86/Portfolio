@@ -63,9 +63,12 @@ function GitHubPage() {
           )}
         </div>
         <div className="repos_container">
-          {data && data?.repos && isDesktop && data.repos.map((repo) => <RepoCard key={repo.id} repo={repo} />)}
           {data &&
-            data?.repos &&
+            data?.repos?.length > 0 &&
+            isDesktop &&
+            data.repos.map((repo) => <RepoCard key={repo.id} repo={repo} />)}
+          {data &&
+            data?.repos?.length > 0 &&
             !isDesktop &&
             data.repos.slice(0, 3).map((repo) => <RepoCard key={repo.id} repo={repo} />)}
         </div>
