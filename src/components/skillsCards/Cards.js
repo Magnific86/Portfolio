@@ -14,6 +14,7 @@ function Cards(){
       {skillSet.map((item, index) => (
        
           <a
+          key={index}
           data-aos="fade-up"
           
             href={item.url}
