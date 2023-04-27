@@ -1,5 +1,5 @@
-import { Header } from "../../components";
-import { Contact, About, ProjectPage } from "..";
+import { Header } from "../../components"
+import { Contact, About, ProjectPage } from ".."
 
 function Home() {
   return (
@@ -11,7 +11,7 @@ function Home() {
       <ProjectPage />
       <Contact />
     </>
-  );
+  )
 }
 
-export default Home;
+export default Home
